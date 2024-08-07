@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythex Clone</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>pythex</h1>
+        <div class="input-section">
+            <label for="regex">Your regular expression:</label>
+            <input type="text" id="regex" name="regex">
+        </div>
+        <div class="options">
+            <button id="ignorecase">IGNORECASE</button>
+            <button id="multiline">MULTILINE</button>
+            <button id="dotall">DOTALL</button>
+            <button id="verbose">VERBOSE</button>
+        </div>
+        <div class="input-section">
+            <label for="test-string">Your test string:</label>
+            <textarea id="test-string" name="test-string" rows="4"></textarea>
+        </div>
+        <button id="match">Match</button>
+        <div class="results">
+            <div class="match-result">
+                <h3>Match result:</h3>
+                <pre id="match-result"></pre>
+            </div>
+            <div class="match-captures">
+                <h3>Match captures:</h3>
+                <pre id="match-captures"></pre>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
